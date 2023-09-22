@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Nanum Pen Script', cursive;
+}
+
+.App {
+  text-align: center;
+  background-color: #ae445a;
+  background-image: 
+      radial-gradient(at 47% 33%, hsl(286.32, 53%, 21%) 0, transparent 59%), 
+      radial-gradient(at 82% 65%, hsl(326.77, 47%, 27%) 0, transparent 55%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+/* Music Section Styling */
+.Music-Section{
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+}
+
+.Music-Section .Music-Button{
+  position: relative;
+  border: none;
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  background: rgba( 255, 255, 255, 0.3 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 0px );
+  -webkit-backdrop-filter: blur( 0px );
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Music-Section .Music-Button .Music-Button-Icon{
+  background: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #757575!important;
+}
+
+.Music-Section .Music-Button .clicked{
+  animation: fadeInDown 0.5s ease-in-out;
+  animation-iteration-count: 1;
+}
+
+/* Styling for Hint Component and Statistics Component Modal */
+.Hint-Modal{
+  text-align: left;
+}
+
+.Hint-Button, .Statistics-Button{
+  text-align: left;
+  backdrop-filter: blur(25px) saturate(78%);
+  -webkit-backdrop-filter: blur(25px) saturate(78%);
+  background-color: rgba(69, 25, 82, 0.34);
+  border-radius: 10px;
+  border: 1px solid rgba(209, 213, 219, 0.3);
+  font-size: 0.7em;
+  letter-spacing: 0.1em;
+}
+
+.Hint-Button:hover, .Hint-Button:active, .Statistics-Button:hover, .Statistics-Button:active{
+  background: #451952!important;
+  outline: none;
+  border: 1px solid #451952;
+}
+
+.modal-content{
+  backdrop-filter: blur(25px) saturate(78%);
+  -webkit-backdrop-filter: blur(25px) saturate(78%);
+  background-color: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(209, 213, 219, 0.3);
+}
+
+.modal-header{
+  padding: 10px 15px;
+}
+
+.modal-header .modal-title{
+  font-weight: bolder;
+  letter-spacing: 0.1em;
+}
+
+.modal-body{
+  font-weight: 600;
+  font-size: 18px;
+  color: #424242;
+}
+
+.Statistics-Modal{
+  text-align: right;
+}
+
+.Statistics-Card{
+  text-align: center;
+  color: #757575;
+}
+
+.Statistics-Card .Statistics-Card-Icon{
+  font-size: 30px;
+}
+
+.Statistics-Card h2{
+  font-size: 40px;
+  font-weight: bolder;
+}
+
+/* Styling for alert messages */
+.Correct-Alert {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: #fafafa;
+  padding: 10px;
+  text-align: center;
+  width: fit-content;
+  border: none;
+  border-top: 5px solid green;
+  border-radius: 0;
+  backdrop-filter: blur(21px) saturate(78%);
+  -webkit-backdrop-filter: blur(21px) saturate(78%);
+  background-color: rgba(126, 211, 33, 0.66);
+  animation: fadeInDown 1 0.5s ease-in-out;
+}
+
+.Wrong-Alert {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: #fafafa;
+  padding: 10px;
+  text-align: center;
+  width: fit-content;
+  border: none;
+  border-top: 5px solid red;
+  border-radius: 0;
+  backdrop-filter: blur(21px) saturate(78%);
+  -webkit-backdrop-filter: blur(21px) saturate(78%);
+  background-color: rgba(208, 2, 27, 0.66);
+  animation: fadeInDown 1 0.5s ease-in-out;
+}
+
+.Wrong-Alert p, .Correct-Alert p{
+  margin-bottom: 0;
+}
+
+.Shake{
+  animation: shakeX 1s ease-out;
+}
+
+/* Animations */
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes shakeX {
+  from,
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+    transform: translate3d(-10px, 0, 0);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translate3d(10px, 0, 0);
+    transform: translate3d(10px, 0, 0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
