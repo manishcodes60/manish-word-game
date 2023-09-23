@@ -33,7 +33,10 @@ I had good prior experience in Web Development. My stack mainly revolved around 
    ```
    By default, the backend runs on [http://localhost:8080](http://localhost:8080)
    
-4. Then, go back to the `frontend` folder and run the following command
+4. Then, go back to the `frontend` folder and run the following commands
+   ```
+   $ npm install
+   ```
    ```
    $ npm start
    ```
