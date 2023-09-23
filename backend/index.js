@@ -8,6 +8,7 @@ app.use(bodyParser.json());
 
 // Declaring variables for global use
 let score = 0;
+let correctAnswers = 0;
 let totalQuestions = 0;
 
 // Function to scramble a word
@@ -81,6 +82,7 @@ app.get("/word", async (req, res) => {
     }
 
     console.log(originalWord);
+    console.log(correctAnswers);
 
     // returning the data as json
     res.json({
@@ -89,6 +91,7 @@ app.get("/word", async (req, res) => {
       wordDefinition: wordDefinition,
       wordCategory: wordCategory,
       totalQuestions: totalQuestions,
+      correctAnswers: correctAnswers,
     });
   } catch (error) {
     // Handle any errors that occur during the request
@@ -108,6 +111,7 @@ app.get("/score", (req, res) => {
 app.patch("/updateScore", (req, res) => {
   // Update the score if the guess is correct
   score += req.body.newValue;
+  correctAnswers++;
   // return the updated score
   res.json({ updatedUserScore: score });
 });

@@ -61,7 +61,7 @@ function GameStatistics(props) {
                       icon={faCircleCheck}
                     />
                   </p>
-                  <h2>{props.prop1 - 1}</h2>
+                  <h2>{props.prop3}</h2>
                   <p>Correct Answer</p>
                 </div>
               </Col>
@@ -73,7 +73,7 @@ function GameStatistics(props) {
                       icon={faCircleXmark}
                     />
                   </p>
-                  <h2>0</h2>
+                  <h2>{props.prop1 - props.prop3 - 1}</h2>
                   <p>Incorrect Answer</p>
                 </div>
               </Col>

@@ -23,6 +23,7 @@ function GameContainer() {
   const [wordHint, setWordHint] = useState(null);
   const [wordCategory, setWordCategory] = useState(null);
   const [userGuess, setUserGuess] = useState("");
+  const [correctAnswers, setCorrectAnswers] = useState(null);
   const [totalQuestions, setTotalQuestions] = useState(null);
   const [currentUserScore, setCurrentUserScore] = useState("");
   const [isWrongGuess, setIsWrongGuess] = useState(false);
@@ -58,6 +59,7 @@ function GameContainer() {
       setWordHint(data.wordDefinition);
       setWordCategory(data.wordCategory);
       setTotalQuestions(data.totalQuestions);
+      setCorrectAnswers(data.correctAnswers);
       setIsLoading(false);
     } catch (error) {
       console.error("Error:", error);
@@ -100,6 +102,8 @@ function GameContainer() {
       setIsWrongGuess(true);
       showWrongAlertMessage();
 
+      setUserGuess("");
+      fetchScrambledWord();
       // Add a delay to remove the shake class animation
       setTimeout(() => {
         setIsWrongGuess(false);
@@ -203,6 +207,7 @@ function GameContainer() {
                           <GameStatistics
                             prop1={totalQuestions - 1}
                             prop2={currentUserScore}
+                            prop3={correctAnswers}
                           />
                         </Col>
                       </Row>
