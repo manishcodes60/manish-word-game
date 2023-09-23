@@ -11,9 +11,6 @@ Email: manish.acharya@vanderbilt.edu
 
 This project is a game named "ekreb", a word scrambling game that tests the user on their ability to guess a word from its scrambled version. The app prompts the user with scrambled words, and the user has to guess the word. The app displays the word category. If users wish, they can see the hint provided for words. They can also check their accuracy and score as the game goes on. Users are notified with alert messages if their guess is wrong or right, and a cool shake animation if the user guesses the wrong word.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
 ## Code Reflection
 
 For this project, I have used React and nodejs. React is used for all the front-end designs. I used CSS and Bootstrap for all the designs and stylings. Nodejs is powering the backend for this project. The RESTful API was built using nodejs. While coding in React I made good use of functional components to make code organized and increase it's flexibility. The frontend and backend part works side by side to deliver the desired output. 
@@ -21,14 +18,6 @@ For this project, I have used React and nodejs. React is used for all the front-
 ## Self Reflection
 
 I had good prior experience in Web Development. My stack mainly revolved around Java and Java Spring. I have a good  knowledge of REST API and git. but it is my first time coding in React and Nodejs (finally, I am no more hesitant to React). Some concepts were new to me and I took some time to look after it. Due to exams and another conflicting schedule, I wasn't able to attend workshops organized by Change++ but hopefully, I was able to pull off the project through different resources available online. Overall, I have given my best to this project but if time was not the constraint then I would have also tried to implement action-specific sound effects, some other animations, a timer, and a scoring policy. 
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
 ## Instruction
 
